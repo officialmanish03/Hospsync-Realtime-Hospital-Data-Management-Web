@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking</title>
+    <link rel="stylesheet" href="appointment.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Appointment Booking</h1>
+        <p>Book appointments in advance with available doctors.</p>
+        <button id="book-now">Book Now</button>
+        <div id="booking-form" style="display: none;">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <input type="date" id="date">
+            <input type="time" id="time">
+            <button id="submit-booking">Submit Booking</button>
+        </div>
+        <div id="confirmation" style="display: none;">
+            <p>Your appointment has been booked!</p>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="appointment.js"></script>
+</body>
+</html>
