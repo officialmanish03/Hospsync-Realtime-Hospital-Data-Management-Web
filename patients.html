@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Management</title>
+    <link rel="stylesheet" href="patients.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>Patient Realtime Data</h2>
+    </nav>
+
+    <!-- Top Section -->
+    <div class="top-container">
+        <button id="addPatientBtn">+ Add Patient</button>
+        <input type="text" id="searchInput" placeholder="Search patient by name...">
+        <span id="patientCount">Patients Today: 0</span>
+    </div>
+
+    <!-- Patient Form (Initially Hidden) -->
+    <div id="patientFormContainer" class="hidden">
+        <h3>Add New Patient</h3>
+        <input type="text" id="name" placeholder="Patient Name" required>
+        <input type="number" id="age" placeholder="Age" required>
+        <select id="sex">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        <input type="text" id="aadhar" placeholder="Aadhar Number" required>
+        <button id="submitPatient">Submit</button>
+        <button id="closeForm">Cancel</button>
+    </div>
+
+    <!-- Patient List -->
+    <h3>Patient List</h3>
+    <table id="patientTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Aadhar No.</th>
+                <th>Time</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="patientList"></tbody>
+    </table>
+
+    <script type="module" src="patients.js"></script>
+
+</body>
+</html>
