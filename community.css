@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.community-section {
+    background-color: #d0e8ff;
+    padding: 50px;
+}
+
+.superadmin-section {
+    background-color: #fce0e0;
+    padding: 50px;
+}
+
+h1 {
+    color: #007bff;
+}
+
+.warning {
+    color: red;
+    font-weight: bold;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
