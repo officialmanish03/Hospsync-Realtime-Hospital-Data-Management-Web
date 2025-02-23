@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="inventory.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="counter-container">
+            <div class="counter" id="icu-beds-counter">
+                <h2>ICU Beds Available</h2>
+                <p id="icu-beds-count">0</p>
+                <button class="update-btn" data-form="icu-beds-form">Update</button>
+            </div>
+            <div class="counter" id="oxygen-cylinders-counter">
+                <h2>Oxygen Cylinders</h2>
+                <p id="oxygen-cylinders-count">0</p>
+                <button class="update-btn" data-form="oxygen-cylinders-form">Update</button>
+            </div>
+            <div class="counter" id="beds-counter">
+                <h2>Beds Available</h2>
+                <p id="beds-count">0</p>
+                <button class="update-btn" data-form="beds-form">Update</button>
+            </div>
+            <div class="counter" id="blood-groups-counter">
+                <h2>Blood Groups</h2>
+                <p id="blood-groups-count">0</p>
+                <button class="update-btn" data-form="blood-groups-form">Update</button>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <div class="table-section">
+                <h3>ICU Beds Status</h3>
+                <table id="icu-beds-table">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>ICU No.</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="table-section">
+                <h3>Oxygen Cylinders Status</h3>
+                <table id="oxygen-cylinders-table">
+                    <thead>
+                        <tr>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="table-section">
+                <h3>Beds Status</h3>
+                <table id="beds-table">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Bed No.</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="table-section">
+                <h3>Blood Groups Status</h3>
+                <table id="blood-groups-table">
+                    <thead>
+                        <tr>
+                            <th>Blood Group</th>
+                            <th>Availability</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="forms-container">
+            <div id="icu-beds-form" class="form" style="display: none;">
+                <h3>Update ICU Beds</h3>
+                <input type="number" id="icu-sno" placeholder="S.No">
+                <input type="text" id="icu-no" placeholder="ICU No.">
+                <select id="icu-status">
+                    <option value="Available">Available</option>
+                    <option value="Filled">Filled</option>
+                </select>
+                <button id="submit-icu-beds">Submit</button>
+            </div>
+
+            <div id="oxygen-cylinders-form" class="form" style="display: none;">
+                <h3>Update Oxygen Cylinders</h3>
+                <input type="number" id="oxygen-quantity" placeholder="Quantity">
+                <button id="submit-oxygen-cylinders">Submit</button>
+            </div>
+
+            <div id="beds-form" class="form" style="display: none;">
+                <h3>Update Beds</h3>
+                <input type="number" id="beds-sno" placeholder="S.No">
+                <input type="text" id="beds-no" placeholder="Bed No.">
+                <select id="beds-status">
+                    <option value="Available">Available</option>
+                    <option value="Filled">Filled</option>
+                </select>
+                <button id="submit-beds">Submit</button>
+            </div>
+
+            <div id="blood-groups-form" class="form" style="display: none;">
+                <h3>Update Blood Groups</h3>
+                <input type="text" id="blood-group" placeholder="Blood Group">
+                <select id="blood-availability">
+                    <option value="Available">Available</option>
+                    <option value="Unavailable">Unavailable</option>
+                </select>
+                <button id="submit-blood-groups">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="inventory.js"></script>
+</body>
+</html>
